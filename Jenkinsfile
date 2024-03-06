@@ -5,10 +5,10 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    // Compile the new_file.cpp using shell script
-                    sh 'g++ -o new_file new_file.cpp'
                     // Trigger the 'PES1UG21CS202-1' Jenkins job for building
                     build 'PES1UG21CS202-1'
+                    // Compile the new_file.cpp using shell script
+                    sh 'g++ -o new_file new_file.cpp'
                 }
             }
         }
